@@ -1,0 +1,57 @@
+@import '../styles/variable';
+@import '../styles/mixin';
+header {
+    background-color: $colorDesaturatedDarkCyan;
+    background-image: url(../images/bg-header-mobile.svg);
+    height: 10rem;
+    position: relative;
+    margin-bottom: 5rem;
+    .filter_tags {
+        @include flex(row, flex-start);
+        flex-wrap: wrap;
+        gap: 1rem;
+        .filter {
+            @include flex(row, center);
+            span {
+                color: $colorDesaturatedDarkCyan;
+                background-color: $colorLightGrayishCyanHeader;
+                padding: .5rem;
+                border-top-left-radius: .3rem;
+                border-bottom-left-radius: .3rem;
+                font-size: .8rem;
+                font-weight: 700;
+            }
+            img {
+                background-color: $colorDesaturatedDarkCyan;
+                padding: .5rem;
+                border-top-right-radius: .3rem;
+                border-bottom-right-radius: .3rem;
+                cursor: pointer;
+                &:hover {
+                    background-color: $colorVeryDarkGrayishCyan;
+                }
+            }
+        }
+    }
+    .clear {
+        background-color: transparent;
+        border: none;
+        color: $colorDesaturatedDarkCyan;
+        font-weight: 700;
+        cursor: pointer;
+        &:hover {
+            border-bottom: 1px solid $colorVeryDarkGrayishCyan;
+        }
+    }
+}
+
+@media (min-width: 62em) {
+    header {
+        background-image: url(../images/bg-header-desktop.svg);
+        .filter_tags {
+            .filter {
+                @include flex(row, center);
+            }
+        }
+    }
+}

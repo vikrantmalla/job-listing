@@ -1,0 +1,33 @@
+@mixin flex($direction, $justify) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $justify;
+    align-items: center;
+}
+
+@mixin button($bgcolor, $bordercolor, $boxshadow) {
+    border: none;
+    border-bottom: .1rem solid $bordercolor;
+    box-shadow: 0 .3rem .9rem $boxshadow;
+    width: 75%;
+    padding: 1rem;
+    border-radius: 5rem;
+    color: #fff;
+    font-weight: 600;
+    background-color: $bgcolor;
+    cursor: pointer;
+    letter-spacing: 1px;
+    opacity: 1;
+    transition: all .2s ease;
+}
+
+@mixin title($fontsize) {
+    font-size: $fontsize;
+    color: $colorDarkGrayishBlue;
+}
+
+@mixin para($fontsize) {
+    font-size: $fontsize;
+    color: $colorGrayishBlue;
+    line-height: 1.7;
+}

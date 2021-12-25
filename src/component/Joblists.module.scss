@@ -1,0 +1,4 @@
+@import '../styles/mixin';
+.jobs_container {
+    @include flex(column, center);
+}
