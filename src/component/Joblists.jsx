@@ -5,27 +5,27 @@ import { JobContext } from '../context/JobContext'
 function Jobs() {
     const { Data, filterKeyword } = useContext(JobContext);
     const [newData, setNewData] = useState([]);
-    const FilteredData = () => {
-        if (filterKeyword) {
-            const filter = Data.filter((item) => {
-                return filterKeyword.every((key) => {
-                    return (
-                        item.role === key ||
-                        item.level === key ||
-                        item.languages.includes(key) ||
-                        item.tools.includes(key)
-                    );
-                });
-            });
-            setNewData(filter);
-        } else {
-            setNewData(Data);
-        }
-    };
 
     useEffect(() => {
+        const FilteredData = () => {
+            if (filterKeyword) {
+                const filter = Data.filter((item) => {
+                    return filterKeyword.every((key) => {
+                        return (
+                            item.role === key ||
+                            item.level === key ||
+                            item.languages.includes(key) ||
+                            item.tools.includes(key)
+                        );
+                    });
+                });
+                setNewData(filter);
+            } else {
+                setNewData(Data);
+            }
+        };
         FilteredData();
-    });
+    }, [filterKeyword, Data]);
 
     return (
         <div className={styles.jobs_container}>
