@@ -25,7 +25,7 @@ function Jobs() {
 
     useEffect(() => {
         FilteredData();
-    }, [filterKeyword]);
+    });
 
     return (
         <div className={styles.jobs_container}>
