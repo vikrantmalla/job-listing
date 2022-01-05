@@ -48,6 +48,7 @@ header {
 @media (min-width: 62em) {
     header {
         background-image: url(../images/bg-header-desktop.svg);
+        margin-bottom: 4rem;
         .filter_tags {
             .filter {
                 @include flex(row, center);

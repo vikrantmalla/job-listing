@@ -11,21 +11,21 @@ const Job = ({ id, company, contract, featured, location, logo, New, position, p
 
             <div className={`${New && featured ? "job active" : "job"}`} key={id} >
                 <div className={styles.jobContent}>
-                    <div className={styles.companyLogo}> <img src={logo} alt="company-logo" /></div>
+                    <img src={logo} alt="company-logo" />
                     <div className={styles.jobInfo}>
                         <div className={styles.companyInfoHeader}>
                             <span>{company}</span>
-                            <div>
-                                {New && <button className={styles.new}>NEW!</button>}
-                                {featured && <button className={styles.feature}>FEATURED</button>}
-                            </div>
+                            {New && <button className={styles.new}>NEW!</button>}
+                            {featured && <button className={styles.feature}>FEATURED</button>}
                         </div>
                         <h1>{position}</h1>
-                        <div className={styles.companyInfoFooter}>
-                            <p>{postedAt}</p>
-                            <p><span>&nbsp;•&nbsp;</span>{contract}</p>
-                            <p><span>&nbsp;•&nbsp;</span>{location}</p>
-                        </div>
+                        <ul className={styles.companyInfoFooter}>
+                            <li>{postedAt}</li>
+                            <li>•</li>
+                            <li>{contract}</li>
+                            <li>•</li>
+                            <li>{location}</li>
+                        </ul>
                         <hr />
                     </div>
                 </div>

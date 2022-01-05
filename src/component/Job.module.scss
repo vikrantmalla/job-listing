@@ -1,13 +1,11 @@
 @import '../styles/variable';
 @import '../styles/mixin';
 .jobContent {
-    .companyLogo {
-        img {
-            width: 3rem;
-            height: 3rem;
-            transform: translateY(-50%);
-            margin-bottom: .8rem;
-        }
+    img {
+        width: 3rem;
+        height: 3rem;
+        transform: translateY(-50%);
+        margin-bottom: .8rem;
     }
     .jobInfo {
         display: grid;
@@ -49,7 +47,8 @@
             justify-content: flex-start;
             align-items: flex-start;
             gap: .5rem;
-            p {
+            li {
+                list-style: none;
                 color: $colorDarkGrayishCyan;
                 font-size: .9rem;
                 margin-bottom: 1rem;
@@ -85,11 +84,9 @@
 
 @media (min-width: 42em) {
     .jobContent {
-        .companyLogo {
-            img {
-                width: 4rem;
-                height: 4rem;
-            }
+        img {
+            width: 4rem;
+            height: 4rem;
         }
     }
 }
@@ -101,11 +98,9 @@
         justify-content: flex-start;
         align-items: center;
         gap: 1rem;
-        .companyLogo {
-            img {
-                margin-bottom: 0;
-                transform: translateY(0);
-            }
+        img {
+            margin-bottom: 0;
+            transform: translateY(0);
         }
         .jobInfo {
             margin-top: 0;
@@ -122,7 +117,7 @@
                 }
             }
             .companyInfoFooter {
-                p {
+                li {
                     font-size: .9rem;
                     margin-bottom: 0;
                 }
@@ -143,11 +138,9 @@
 
 @media (min-width: 87em) {
     .jobContent {
-        .companyLogo {
-            img {
-                width: 5rem;
-                height: 5rem;
-            }
+        img {
+            width: 5rem;
+            height: 5rem;
         }
         .jobInfo {
             margin-top: 0;
@@ -160,7 +153,7 @@
                 }
             }
             .companyInfoFooter {
-                p {
+                li {
                     font-size: 1rem;
                 }
             }
@@ -168,7 +161,7 @@
     }
     .tag {
         span {
-            font-size: 1rem;
+            font-size: .8rem;
         }
     }
 }
